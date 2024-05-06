@@ -339,8 +339,9 @@
             grid-row: 2/3;
 
             display: grid;
-            gap: 10px;
-            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 8px;
+            grid-template-columns: auto 1fr;
             grid-template-rows: 1fr 1fr 1fr;
         }
 
@@ -348,8 +349,9 @@
         .cvemployment3 {
 
             display: grid;
-            gap: 10px;
-            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 8px;
+            grid-template-columns: auto 1fr;
             grid-template-rows: 1fr 1fr 1fr;
         }
 
@@ -498,6 +500,9 @@
         .delbtn:hover {
             background-color: white;
             color: rgb(255, 0, 0);
+        }
+        .bold {
+            font-weight: bold;
         }
         /* .darkmode{
             background-color: darkgray;

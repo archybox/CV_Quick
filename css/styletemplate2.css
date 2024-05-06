@@ -330,7 +330,7 @@
         .cvemployment2>div:nth-child(1) {
             grid-column: 2/3;
             grid-row: 1/2;
-
+            text-align: right;
         }
 
         .cveducation2>div:nth-child(2),
@@ -358,6 +358,7 @@
         .cvemployment3>div:nth-child(1) {
             grid-column: 2/3;
             grid-row: 1/2;
+            text-align: right;
         }
 
         .cveducation3>div:nth-child(2),
