@@ -1,0 +1,470 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: gold;
+            position: fixed;
+            top: 0px;
+        }
+
+        .h h1 {
+            font-size: 20px;
+            animation: logoanimation 5s infinite linear;
+            box-shadow: 0px 3px 5px 0px rgb(168, 0, 0);
+        }
+
+        .h h1:hover {
+            cursor: pointer;
+        }
+
+        @keyframes logoanimation {
+            0% {
+                color: gold
+            }
+
+            50% {
+                color: black
+            }
+
+            100% {
+                color: gold
+            }
+        }
+
+
+        .h button,
+        .h select {
+            color: gold;
+            border: 1px solid gold;
+            border-radius: 2px;
+            background-color: #000000;
+            height: 25px;
+            width: 75px;
+        }
+
+        .h button:hover,
+        .h select:hover {
+            color: black;
+            border: 1px solid gold;
+            border-radius: 2px;
+            background-color: gold;
+            cursor: pointer;
+            transition: 1s linear;
+        }
+
+        .b {
+            padding: 20px;
+            width: 70%;
+            margin: auto;
+            /* min-height: calc(100vh - 50px); */
+            background-color: rgb(255, 255, 255);
+            font-family: sans-serif;
+        }
+
+        .ux {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: auto auto;
+        }
+
+        .ux>div:nth-child(1) {
+
+            grid-column: 1/2;
+            grid-row: 1/3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(2) {
+
+            grid-column: 2/4;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(3) {
+
+
+            grid-column: 4/6;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(4) {
+
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux input[type="file"] {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-image: url(../emptypic.png);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+        }
+
+        .f {
+            background-color: black;
+            color: GOLD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .personaldetails_details,
+        .educationdetails {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type='text'] {
+            height: 25px;
+            max-width: 80%;
+        }
+
+        input[type='text']:hover {
+            height: 25px;
+            max-width: 70%;
+            border: 1px solid rgb(255, 217, 0);
+            transition: 1s linear;
+        }
+
+        #btn_field {
+            height: 25px;
+            width: 50%;
+        }
+
+        .input_title {
+            font-size: 20px;
+        }
+
+        .field_input,
+        .input_title {
+            border: none;
+            outline: none;
+        }
+
+        .input_title:hover {
+            color: darkgrey;
+            font-weight: bold;
+            transition: 1s linear;
+
+        }
+
+        .display_none {
+            display: none;
+        }
+
+        .display_none_mt50 {
+            margin-top: 50px;
+            display: none;
+        }
+
+        @media print {
+
+            .h,
+            .sp,
+            .f,
+            .b {
+                display: none;
+            }
+
+            .cv {
+                border: none !important;
+                /* width: 100%; */
+                /* height: auto; */
+            }
+        }
+
+        @page {
+            margin: 0mm;
+            /* border: none; */
+            margin-top: -33px;
+        }
+
+        .cv {
+            width: 210mm;
+            min-height: 270mm;
+            border: 1px solid black;
+
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: auto;
+
+
+        }
+
+        .cvcn {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 150px auto;
+            row-gap: 25px;
+        }
+
+        .cvcn>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cvcn .cvsidebare {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .cvpersonaldetails {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 50px 50px 50px;
+            background-color: #3F495C;
+            color: white;
+            column-gap: 20px;
+        }
+
+        .cvpersonaldetailsphoto {
+            grid-column: 1/2;
+            grid-row: 1/-1;
+        }
+
+        .cvpersonaldetails>div:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size: 40px;
+            align-self: center;
+            /* justify-self: center; */
+
+        }
+
+        .cvpersonaldetails>div:nth-child(3) {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            font-size: 20px;
+            align-self: center;
+
+        }
+
+        .cvpersonaldetails>div:nth-child(4) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            display: flex;
+            align-self: center;
+            gap: 5px;
+        }
+
+        .cvpersonaldetailsphoto img {
+            height: 150px;
+
+        }
+
+        .cv .title {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+        }
+
+        .cv .txt {
+            font-size: 18px;
+
+        }
+
+        .cv .cveducation,
+        .cvemployment {
+            width: 100%;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid black;
+
+        }
+
+        .cv .cveducation>div:nth-child(1),
+        .cvemployment>div:nth-child(1) {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        .cv .cveducation2,
+        .cvemployment2 {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            display: grid;
+            row-gap: 3px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+        .cv .cveducation3,
+        .cvemployment3 {
+
+            display: grid;
+            row-gap: 1px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .cveducation2>div:nth-child(1),
+        .cvemployment2>div:nth-child(1) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            text-align: right;
+        }
+
+        .cveducation2>div:nth-child(2),
+        .cvemployment2>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+        }
+
+
+
+        .cveducation2>div:nth-child(3),
+        .cvemployment2>div:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cveducation2>div:nth-child(4),
+        .cvemployment2>div:nth-child(4) {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+        }
+
+        .cveducation3>div:nth-child(1),
+        .cvemployment3>div:nth-child(1) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            text-align: right;
+        }
+
+        .cveducation3>div:nth-child(2),
+        .cvemployment3>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .cveducation3>div:nth-child(3),
+        .cvemployment3>div:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cveducation3>div:nth-child(4),
+        .cvemployment3>div:nth-child(4) {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+        }
+
+        .cvskill,
+        .cvlanguage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* row-gap: 100px; */
+        }
+
+        .space {
+            width: 100%;
+            height: 200px;
+            /* background-color: rgb(168, 190, 190); */
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .padding-l-30 {
+            padding-left: 30px;
+        }
+
+        .padding-r-30 {
+            padding-right: 30px;
+        }
+
+        .cvskill,
+        .cvlanguage,
+        .cvhb {
+            /*--* dont */
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        .cvfield {
+            border-top: 1px solid black;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        .item_field,
+        .skillfield,
+        .languagefield,
+        .hbfield {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .addbtn {
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(146, 146, 255);
+            transition: 1s;
+            background-color: rgb(146, 146, 255);
+            padding-right: 4px;
+            color: white;
+        }
+
+        .addbtn:hover {
+            background-color: white;
+            color: rgb(146, 146, 255);
+        }
+
+        .hidbtn {
+            border: 1px solid gold;
+            background-color: gold;
+            color: white;
+            transition: 1s;
+        }
+
+        .hidbtn:hover {
+            background-color: rgb(255, 255, 255);
+            color: gold;
+            border: 1px solid gold;
+        }
+
+        .delbtn {
+            border: 1px solid rgb(255, 129, 129);
+            background-color: rgb(255, 129, 129);
+            color: white;
+            transition: 1s;
+        }
+
+        .delbtn:hover {
+            background-color: white;
+            color: rgb(255, 0, 0);
+        }
+
+   
