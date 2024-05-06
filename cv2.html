@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Quick modern template</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: gold;
+            position: fixed;
+            top: 0px;
+        }
+
+        .h h1 {
+            font-size: 20px;
+            animation: logoanimation 5s infinite linear;
+            box-shadow: 0px 3px 5px 0px rgb(168, 0, 0);
+        }
+
+        .h h1:hover {
+            cursor: pointer;
+        }
+
+        @keyframes logoanimation {
+            0% {
+                color: gold
+            }
+
+            50% {
+                color: black
+            }
+
+            100% {
+                color: gold
+            }
+        }
+
+
+        .h button,
+        .h select {
+            color: gold;
+            border: 1px solid gold;
+            border-radius: 2px;
+            background-color: #000000;
+            height: 25px;
+            width: 75px;
+        }
+
+        .h button:hover,
+        .h select:hover {
+            color: black;
+            border: 1px solid gold;
+            border-radius: 2px;
+            background-color: gold;
+            cursor: pointer;
+            transition: 1s linear;
+        }
+
+        .b {
+            padding: 20px;
+            width: 70%;
+            margin: auto;
+            /* min-height: calc(100vh - 50px); */
+            background-color: rgb(255, 255, 255);
+            font-family: sans-serif;
+        }
+
+        .ux {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: auto auto;
+        }
+
+        .ux>div:nth-child(1) {
+
+            grid-column: 1/2;
+            grid-row: 1/3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(2) {
+
+            grid-column: 2/4;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(3) {
+
+
+            grid-column: 4/6;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux>div:nth-child(4) {
+
+
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ux input[type="file"] {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-image: url(emptypic.png);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+        }
+
+        .f {
+            background-color: black;
+            color: GOLD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .personaldetails_details,
+        .educationdetails {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type='text'] {
+            height: 25px;
+            max-width: 80%;
+        }
+
+        input[type='text']:hover {
+            height: 25px;
+            max-width: 70%;
+            border: 1px solid rgb(255, 217, 0);
+            transition: 1s linear;
+        }
+
+        #btn_field {
+            height: 25px;
+            width: 50%;
+        }
+
+        .input_title {
+            font-size: 20px;
+        }
+
+        .field_input,
+        .input_title {
+            border: none;
+            outline: none;
+        }
+
+        .input_title:hover {
+            color: darkgrey;
+            font-weight: bold;
+            transition: 1s linear;
+
+        }
+
+        .display_none {
+            display: none;
+        }
+
+        .display_none_mt50 {
+            margin-top: 50px;
+            display: none;
+        }
+
+        @media print {
+
+            .h,
+            .sp,
+            .f,
+            .b {
+                display: none;
+            }
+
+            .cv {
+                border: none !important;
+                /* width: 100%; */
+                /* height: auto; */
+            }
+        }
+
+        @page {
+            margin: 0mm;
+            /* border: none; */
+            /* margin-top: -30px; */
+        }
+
+        .cv {
+            width: 210mm;
+            min-height: 270mm;
+            border: 1px solid black;
+
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: auto;
+
+
+        }
+
+        .cvcn {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 150px auto;
+            row-gap: 25px;
+        }
+
+        .cvcn>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cvcn .cvsidebare {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .cvpersonaldetails {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 50px 50px 50px;
+            background-color: #3F495C;
+            color: white;
+            column-gap: 20px;
+        }
+
+        .cvpersonaldetailsphoto {
+            grid-column: 1/2;
+            grid-row: 1/-1;
+        }
+
+        .cvpersonaldetails>div:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size: 40px;
+            align-self: center;
+            /* justify-self: center; */
+
+        }
+
+        .cvpersonaldetails>div:nth-child(3) {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            font-size: 20px;
+            align-self: center;
+
+        }
+
+        .cvpersonaldetails>div:nth-child(4) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            display: flex;
+            align-self: center;
+            gap: 5px;
+        }
+
+        .cvpersonaldetailsphoto img {
+            height: 150px;
+
+        }
+
+        .cv .title {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+        }
+
+        .cv .txt {
+            font-size: 18px;
+
+        }
+
+        .cv .cveducation,
+        .cvemployment {
+            width: 100%;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid black;
+
+        }
+
+        .cv .cveducation>div:nth-child(1),
+        .cvemployment>div:nth-child(1) {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        .cv .cveducation2,
+        .cvemployment2 {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            display: grid;
+            row-gap: 3px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+        .cv .cveducation3,
+        .cvemployment3 {
+
+            display: grid;
+            row-gap: 1px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .cveducation2>div:nth-child(1),
+        .cvemployment2>div:nth-child(1) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+        }
+
+        .cveducation2>div:nth-child(2),
+        .cvemployment2>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+        }
+
+
+
+        .cveducation2>div:nth-child(3),
+        .cvemployment2>div:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cveducation2>div:nth-child(4),
+        .cvemployment2>div:nth-child(4) {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+        }
+
+        .cveducation3>div:nth-child(1),
+        .cvemployment3>div:nth-child(1) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .cveducation3>div:nth-child(2),
+        .cvemployment3>div:nth-child(2) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .cveducation3>div:nth-child(3),
+        .cvemployment3>div:nth-child(3) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .cveducation3>div:nth-child(4),
+        .cvemployment3>div:nth-child(4) {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+        }
+
+        .cvskill,
+        .cvlanguage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* row-gap: 100px; */
+        }
+
+        .space {
+            width: 100%;
+            height: 200px;
+            /* background-color: rgb(168, 190, 190); */
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .padding-l-30 {
+            padding-left: 30px;
+        }
+
+        .padding-r-30 {
+            padding-right: 30px;
+        }
+
+        .cvskill,
+        .cvlanguage,
+        .cvhb {
+            /*--* dont */
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        .cvfield {
+            border-top: 1px solid black;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        .item_field,
+        .skillfield,
+        .languagefield,
+        .hbfield {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .addbtn {
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(146, 146, 255);
+            transition: 1s;
+            background-color: rgb(146, 146, 255);
+            padding-right: 4px;
+            color: white;
+        }
+
+        .addbtn:hover {
+            background-color: white;
+            color: rgb(146, 146, 255);
+        }
+
+        .hidbtn {
+            border: 1px solid gold;
+            background-color: gold;
+            color: white;
+            transition: 1s;
+        }
+
+        .hidbtn:hover {
+            background-color: rgb(255, 255, 255);
+            color: gold;
+            border: 1px solid gold;
+        }
+
+        .delbtn {
+            border: 1px solid rgb(255, 129, 129);
+            background-color: rgb(255, 129, 129);
+            color: white;
+            transition: 1s;
+        }
+
+        .delbtn:hover {
+            background-color: white;
+            color: rgb(255, 0, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="c">
+
+        <div class="h">
+            <a href="index.html">
+                <h1>CV Quick</h1>
+            </a>
+            <div class="logo"><img src="" alt=""></div>
+            <button onclick="btnprint()">Get CV</button>
+            <button onclick="showcv()">Show CV</button>
+            <select name="" id="">
+                <option value="">Anglais</option>
+                <option value="">Francais</option>
+            </select>
+
+        </div>
+        <br>
+        <br>
+        <div class="sp" style="height: 50px;"></div>
+        <div class="b">
+
+
+            <div class="personaldetails">
+                <div class="personaldetails_title">
+
+                    <input type="text" class="input_title" id="Personaldetails" value="Personal details">
+                    <!-- <button>...</button> -->
+                    <button class="hidbtn" id="btn_personaldetails" onclick="hidefield(this)"><span
+                            class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span></button>
+                </div>
+
+                <div class="personaldetails_details" id="personaldetails_details">
+
+                    <div class="ux">
+
+                        <div><label for="lphoto"></label>
+                            <input id="lphoto" type="file">
+                        </div>
+
+                        <div><label for="nom">Name</label><input type="text" id="nom" placeholder="name">
+                        </div>
+
+                        <div><label for="familyname">Family Name</label><input type="text" id="familyname"
+                                placeholder="familyname">
+                        </div>
+
+                        <div><label for="email">Email address</label><input type="text" id="email" placeholder="email">
+                        </div>
+
+                    </div>
+                    <label for="headline">Headline</label><input type="text" id="headline" value="Headline"
+                        placeholder="Headline">
+                    <label for="tel">Phone number</label><input type="text" id="tel" placeholder="tel">
+                    <label for="add">Address</label><input type="text" id="add" placeholder="address">
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="profile_field">
+                <div class="profile_title">
+                    <input class="input_title" type="text" id="profile" placeholder="Profile" value="Profile">
+                    <button class="hidbtn" onclick="hidefield(this)"><span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span></button>
+                </div>
+                <div class="" id="profile_field_details">
+                    <textarea style="width: 50%;" name="" id="profiledesc" cols="10" rows="5"
+                        placeholder="profile description"></textarea>
+
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="education_field">
+                <div>
+                    <input type="text" id="educationtitle1" value="Education" placeholder="Education"
+                        class="input_title">
+                    <button class="hidbtn" onclick="hidefield(this)"><span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span></button>
+                </div>
+                <div id="educationdetails1" class="personaldetails_details educationdetails">
+                    <label>Education: </label><input type="text" placeholder="Education">
+                    <label>School: </label><input type="text" placeholder="school">
+                    <label>City: </label><input type="text" placeholder="city">
+                    <label>Start date: </label><input style="width: 50%;" type="date">
+                    <label>End date: </label><input style="width: 50%;" type="date">
+                    <label>Description: </label><textarea style="width: 50%;" name="" id="" cols="30" rows="5"
+                        placeholder="Description"></textarea>
+                </div>
+                <button class="addbtn" onclick="addformation(this)"><span class="material-symbols-outlined">
+                        add
+                    </span> Formation</button>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div class="employment_field">
+                <div>
+                    <input type="text" id="employmenttitle1" value="Employment" placeholder="Employment"
+                        class="input_title">
+                    <button class="hidbtn" onclick="hidefield(this)"><span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span></button>
+                </div>
+                <div id="employmentdetails1" class="educationdetails">
+                    <label>Position: </label><input type="text" placeholder="Position">
+                    <label>Employer: </label><input type="text" placeholder="Employer">
+                    <label>City: </label><input type="text" placeholder="City">
+                    <label>Start date: </label><input style="width: 50%;" type="date">
+                    <label>End date: </label><input style="width: 50%;" type="date">
+                    <label>Description: </label><textarea style="width: 50%;" name="" id="" cols="30" rows="5"
+                        placeholder="Description"></textarea>
+                </div>
+                <button class="addbtn" onclick="addemployment(this)"><span class="material-symbols-outlined">
+                        add
+                    </span> Employment</button>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <button class="addbtn" onclick="addnewfield()"><span class="material-symbols-outlined">
+                    add
+                </span>Custom field</button>
+            <br>
+            <br>
+            <div class="area_field" id="area_fieldid">
+                <div class="item_field" id="fieldid1">
+                    <input class="field_input" type="text" placeholder="Field title">
+                    <input type="text" placeholder="Field description">
+                    <button class="delbtn" onclick="deletefield(this)"><span class="material-symbols-outlined">
+                            delete
+                        </span></button>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <button class="addbtn" onclick="addnewskill()"><span class="material-symbols-outlined">
+                    add
+                </span> Skill</button>
+            <br>
+            <br>
+            <div class="skillsfields">
+                <input class="input_title" type="text" id="tskills" placeholder="Skills" value="Skills">
+
+                <div class="skillfield" id="skillfieldid1">
+                    <input type="text" placeholder="Skill">
+                    <input type="range" min="0" max="4" step="1" onchange="onchangeskillrange(this)">
+                    <span>Choose</span>
+                    <button class="delbtn" onclick="deletskill(this)"><span class="material-symbols-outlined">
+                            delete
+                        </span></button>
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <button class="addbtn" onclick="addnewlanguage()"><span class="material-symbols-outlined">
+                    add
+                </span>Language</button>
+            <br>
+            <br>
+            <div class="languagesfields">
+                <input class="input_title" type="text" id="tlanguages" placeholder="Languages" value="Languages">
+
+                <div class="languagefield" id="languagefieldid1">
+                    <input type="text" placeholder="Language">
+                    <input type="range" min="0" max="4" step="1" onchange="onchangelanguagerange(this)">
+                    <span>Choose</span>
+                    <button class="delbtn" onclick="deletlanguage(this)"><span class="material-symbols-outlined">
+                            delete
+                        </span></button>
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <button class="addbtn" onclick="addnewhb()"><span class="material-symbols-outlined">
+                    add
+                </span> Hobbie</button>
+            <br>
+            <br>
+            <div class="hbsfields">
+                <input class="input_title" type="text" id="thbs" placeholder="Hobbies" value="Hobbies">
+
+                <div class="hbfield" id="hbfieldid1">
+                    <input type="text" placeholder="Hobbie">
+                    <button class="delbtn" onclick="delethb(this)"><span class="material-symbols-outlined">
+                            delete
+                        </span></button>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="cv">
+
+            <div class="cvcn">
+                <div class="cvpersonaldetails">
+                    <div class="cvpersonaldetailsphoto">
+                        <img id="cvphotoid" src="emptypic.png" alt="">
+                    </div>
+                    <div id="cvheadline" class="cvheadline cvd2">h1</div>
+                    <div class="cvname" id="cvname"></div>
+                    <div>
+                        <span id="cvemail"></span>
+                        <span id="cvtel"></span>
+                        <span id="cvadd"></span>
+                    </div>
+                </div>
+
+                <div class="padding-l-30">
+                    <div>
+                        <div id="cvprofiletitle" class="title"></div>
+                        <div id="cvprofiledesc" class="txt profiletextcss"></div>
+                    </div>
+                    <div class="cveducation">
+                        <div class="title">
+                            Education
+                        </div>
+                        <div id="cveducationdetails1" class="cveducation2">
+                            <div class="bold">date debut - date fin</div>
+                            <div class="bold">education</div>
+                            <div class="bold">school, city</div>
+                            <div>description</div>
+                        </div>
+                    </div>
+                    <div class="cvemployment">
+                        <div class="title ">
+                            Employment
+                        </div>
+                        <div id="cvemploymentdetails1" class="cvemployment2">
+                            <div class="bold">date debut - date fin</div>
+                            <div class="bold">position</div>
+                            <div class="bold">employer, city</div>
+                            <div>description</div>
+                        </div>
+                    </div>
+                    <div class="cvfield">
+                        <div id="cvfieldid1">
+                            <div class="title"></div>
+                            <div class="txt"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="padding-r-30 padding-l-30">
+                    <div class="cvskillsfields">
+                        <div id="cvtskills" class="title">Skills</div>
+                        <div class="cvskill" id="cvskillfieldid1">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="cvlanguagesfields">
+                        <div id="cvtlanguages" class="title">Languages</div>
+                        <div class="cvlanguage" id="cvlanguagefieldid1">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="cvhbsfields">
+                        <div id="cvthbs" class="title">Hobbies</div>
+                        <div class="cvhb" id="cvhbfieldid1">
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div> <!--end cv p-1-->
+
+        <br>
+        <br>
+        <div class="f">
+            <p>&copy; 2024 CV Quick LMOUHANDIZ DEV102. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let dropupicon = "<span class=\"material-symbols - outlined\">arrow_drop_up</span >";
+    let dropdoicon = "<span class=\"material-symbols-outlined\">arrow_drop_down</span>";
+    let deleteicon = "<span class=\"material-symbols-outlined\">delete</span>";
+    let addicon = "<span class=\"material-symbols-outlined\">add</span>";
+
+    let numberoffields = 1;
+    let numberofformation = 1;
+    let numberofemployment = 1;
+    let nbskill = 1;
+    let nblanguage = 1;
+    let pages = 1;
+    let nbhb = 1;
+
+    let photourl = "emptypic.png"
+    let fileInputphoto = document.getElementById('lphoto');
+    fileInputphoto.onblur = () => {
+        let photo = fileInputphoto.files[0];
+        if (photo) {
+            photourl = URL.createObjectURL(photo);
+            fileInputphoto.style.backgroundImage = "url(" + photourl + ")";
+            fileInputphoto.style.backgroundSize = "cover";
+            cvphotoid.src = photourl;
+        }
+    };
+
+
+
+    function addoninputtoallinputs() {
+        let inp = document.querySelectorAll("input[type=text]");
+        for (let i of inp) {
+            i.oninput = filling;
+        }
+        let inpdate = document.querySelectorAll("input[type=date]");
+        for (let i of inp) {
+            i.onchange = filling;
+        }
+        let txtareas = document.querySelectorAll("textarea");
+        for (let i of txtareas) {
+            i.oninput = filling;
+        }
+    }
+
+    function addnewfield() {
+        numberoffields += 1;
+        fieldhtml = "<div class=\"item_field\" id=\"fieldid" + numberoffields + "\"><input class=\"field_input\" type=\"text\" placeholder=\"Field title\"> <input type=\"text\" placeholder=\"Field description\"><button class='delbtn' onclick=\"deletefield(this)\">" + deleteicon + "</button></div>"
+        document.querySelector("#area_fieldid").insertAdjacentHTML("beforeend", fieldhtml)
+        let cvf = "<div id=\"cvfieldid" + numberoffields + "\"><div class=\"title\"></div><div class=\"txt\"></div></div>"
+        document.querySelector(".cvfield").insertAdjacentHTML("beforeend", cvf)
+        console.log(document.querySelector(".cvfield"))
+        addoninputtoallinputs()
+    }
+    function deletefield(e) {
+        document.getElementById("cv" + e.parentElement.id).remove();
+        e.parentElement.remove();
+    }
+    function deletformation(e) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+    function deletemployment(e) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+    function hidefield(e) {
+        e.parentElement.nextElementSibling.classList.toggle("display_none");
+    }
+    function filling() {
+        cvheadline.innerHTML = headline.value;
+        // cvPersonaldetailstitle.innerHTML = Personaldetails.value;
+        cvname.innerText = nom.value + " " + familyname.value;
+        cvemail.innerText = email.value;
+        cvtel.innerText = tel.value;
+        cvadd.innerText = add.value;
+        cvprofiletitle.innerText = profile.value;
+        cvprofiledesc.innerText = profiledesc.value;
+        cvtskills.innerText = tskills.value;
+        cvthbs.innerText = thbs.value;
+        cvtlanguages.innerText = tlanguages.value;
+        document.querySelector(".cveducation").children[0].innerText = educationtitle1.value
+        document.querySelector(".cvemployment").children[0].innerText = employmenttitle1.value
+        fillbyclass("education_field");
+        fillbyclass("employment_field");
+        fillfields();
+        fillskills();
+        filllanguages();
+        fillhbs();
+    }
+
+    let btnshowcv = false;
+    function showcv() {
+        btnshowcv = !btnshowcv;
+        if (btnshowcv) {
+            event.target.innerText = "Show form"
+        } else { event.target.innerText = "Show cv" }
+        let con = document.querySelector(".b");
+        con.classList.toggle('display_none');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function addformation(e) {
+        numberofformation++;
+        let codeformation = "<div> <br><hr><br> <input readonly type=\"text\" value=\"Education\" class=\"input_title\"><button class='delbtn' onclick=\"deletformation(this)\">" + deleteicon + "</button><button class='hidbtn' onclick=\"hidefield(this)\">" + dropdoicon + "</button></div><div id=\"educationdetails" + numberofformation + "\" class=\"personaldetails_details\"><label>Education: </label><input type=\"text\" placeholder=\"Education\"><label>School: </label><input type=\"text\" placeholder=\"School\"><label>City: </label><input type=\"text\" placeholder=\"School\"><label>Start date: </label><input style=\"width: 50%;\" type=\"date\"><label>End date: </label><input style=\"width: 50%;\" type=\"date\"><label>Description: </label><textarea style=\"width: 50%;\" name=\"\" id=\"\" cols=\"30\" rows=\"5\" placeholder=\"Description\"></textarea></div>";
+        e.insertAdjacentHTML("beforebegin", codeformation);
+        let codecvformation = "<div id=\"cveducationdetails" + numberofformation + "\" class=\"cveducation3\"><div class=\"bold\" >date debut - date fine</div><div class=\"bold\" >education</div><div class=\"bold\">school, city</div><div>description</div></div>";
+        document.querySelector(".cveducation").insertAdjacentHTML("beforeend", codecvformation);
+        addoninputtoallinputs()
+    }
+    function addemployment(e) {
+        numberofemployment++;
+        let codeemployment = "<div> <br><hr><br> <input readonly type=\"text\" value=\"Employment\" class=\"input_title\"><button class='delbtn' onclick=\"deletemployment(this)\">" + deleteicon + "</button><button class='hidbtn' onclick=\"hidefield(this)\">" + dropdoicon + "</button></div><div id=\"employmentdetails" + numberofemployment + "\" class=\"personaldetails_details\"><label>Employment: </label><input type=\"text\" placeholder=\"Position\"><label>Employer: </label><input type=\"text\" placeholder=\"Employer\"><label>City: </label><input type=\"text\" placeholder=\"City\"><label>Start date: </label><input style=\"width: 50%;\" type=\"date\"><label>End date: </label><input style=\"width: 50%;\" type=\"date\"><label>Description: </label><textarea style=\"width: 50%;\" name=\"\" id=\"\" cols=\"30\" rows=\"5\" placeholder=\"Description\"></textarea></div>";
+        e.insertAdjacentHTML("beforebegin", codeemployment);
+        let codecvemployment = "<div id=\"cvemploymentdetails" + numberofemployment + "\" class=\"cvemployment3\"><div class=\"bold\" >date debut - date fine</div><div class=\"bold\">position</div><div class=\"bold\">employer, city</div><div>description</div></div>";
+        document.querySelector(".cvemployment").insertAdjacentHTML("beforeend", codecvemployment);
+        addoninputtoallinputs()
+    }
+    function fillbyclass(cls) {
+        let elms = document.getElementsByClassName(cls)[0].children;
+        if (elms.length > 0) {
+            for (let i = 1; i < elms.length; i = i + 2) {
+
+                let index1 = elms[i].id;
+                let index2 = "cv" + index1;
+            /*date debut - date fin*/document.getElementById(index2).children[0].innerText = document.getElementById(index1).children[7].value + " " + document.getElementById(index1).children[9].value;
+            /*education*/document.getElementById(index2).children[1].innerText = document.getElementById(index1).children[1].value;
+            /*school, city*/document.getElementById(index2).children[2].innerText = document.getElementById(index1).children[3].value + ", " + document.getElementById(index1).children[5].value;
+            /*description*/document.getElementById(index2).children[3].innerText = document.getElementById(index1).children[11].value;
+            }
+        }
+    }
+    function fillfields() {
+        let elms = document.querySelector(".area_field").children;
+        for (f of elms) {
+            let index1 = f.id;
+            let index2 = "cv" + index1;
+            document.getElementById(index2).children[0].innerHTML = document.getElementById(index1).children[0].value;
+            document.getElementById(index2).children[1].innerHTML = document.getElementById(index1).children[1].value;
+        }
+
+    }
+    function onchangeskillrange(e) {
+        let v = 'choose';
+        if (e.value == 0) { v = 'Beginner' }
+        else if (e.value == 1) { v = "Moderate" }
+        else if (e.value == 2) { v = "Good" }
+        else if (e.value == 3) { v = "Very good" }
+        else if (e.value == 4) { v = "Excellent" }
+        e.nextElementSibling.innerHTML = v
+        fillskills()
+    }
+    function onchangelanguagerange(e) {
+        let v = 'choose';
+        if (e.value == 0) { v = 'Beginner' }
+        else if (e.value == 1) { v = "Moderate" }
+        else if (e.value == 2) { v = "Good" }
+        else if (e.value == 3) { v = "Very good" }
+        else if (e.value == 4) { v = "Fluent" }
+        e.nextElementSibling.innerHTML = v
+        filllanguages()
+    }
+    function deletskill(e) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+    function delethb(e) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+    function deletlanguage(e) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+    function addnewskill() {
+        nbskill++;
+        let skillhtml = "<div class=\"skillfield\" id=\"skillfieldid" + nbskill + "\"><input type=\"text\" placeholder=\"Skill\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangeskillrange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletskill(this)\">" + deleteicon + "</button></div>"
+        document.querySelector(".skillsfields").insertAdjacentHTML("beforeend", skillhtml)
+        let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div ></div><div ></div></div>"
+        document.querySelector(".cvskillsfields").insertAdjacentHTML("beforeend", cvskillhtml)
+    }
+    function addnewlanguage() {
+        nblanguage++;
+        let languagehtml = "<div class=\"languagefield\" id=\"languagefieldid" + nblanguage + "\"><input type=\"text\" placeholder=\"language\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangelanguagerange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletlanguage(this)\">" + deleteicon + "</button></div>"
+        document.querySelector(".languagesfields").insertAdjacentHTML("beforeend", languagehtml)
+        let cvlanguagehtml = "<div class=\"cvlanguage\" id=\"cvlanguagefieldid" + nblanguage + "\"><div ></div><div ></div></div>"
+        document.querySelector(".cvlanguagesfields").insertAdjacentHTML("beforeend", cvlanguagehtml)
+    }
+    function addnewhb() {
+        nbhb++;
+        let hbhtml = "<div class=\"hbfield\" id=\"hbfieldid" + nbhb + "\"><input type=\"text\" placeholder=\"hobbie\"><button class='delbtn' onclick=\"delethb(this)\">" + deleteicon + "</button></div>"
+        document.querySelector(".hbsfields").insertAdjacentHTML("beforeend", hbhtml)
+        let cvhbhtml = "<div class=\"cvhb\" id=\"cvhbfieldid" + nbhb + "\"><div ></div><div>"
+        document.querySelector(".cvhbsfields").insertAdjacentHTML("beforeend", cvhbhtml)
+    }
+
+    function fillskills() {
+        let elms = document.querySelector(".skillsfields").children;
+        for (f in elms) {
+            if (f > 0) {
+                let index1 = elms[f].id;
+                let index2 = "cv" + index1;
+                document.getElementById(index2).children[0].innerHTML = document.getElementById(index1).children[0].value;
+                document.getElementById(index2).children[1].innerHTML = document.getElementById(index1).children[2].innerText;
+            }
+
+        }
+    }
+    function fillhbs() {
+        let elms = document.querySelector(".hbsfields").children;
+        for (f in elms) {
+            if (f > 0) {
+                let index1 = elms[f].id;
+                let index2 = "cv" + index1;
+                document.getElementById(index2).children[0].innerHTML = document.getElementById(index1).children[0].value;
+            }
+        }
+    }
+    function filllanguages() {
+
+        let elms = document.querySelector(".languagesfields").children;
+        for (f in elms) {
+            if (f > 0) {
+                let index1 = elms[f].id;
+                let index2 = "cv" + index1;
+                document.getElementById(index2).children[0].innerHTML = document.getElementById(index1).children[0].value;
+                document.getElementById(index2).children[1].innerHTML = document.getElementById(index1).children[2].innerText;
+            }
+
+        }
+    }
+    // function getMMPerPixel() {
+    //     const inchPerMM = 0.0393701; // 1 mm = 0.0393701 inches
+    //     const dpi = window.devicePixelRatio * 96; // Assume 96dpi as default
+    //     return 25.4 / dpi; // 1 inch = 25.4 mm
+    // }
+
+    function printforme() {
+        let container = document.querySelector(".cv .cvcn")
+        let els = container.children
+        let space = "<div class=\"space\"></div>"
+        var totalHeight = 0;
+
+
+        for (var i = 0; i < els.length; i++) {
+            for (e of els[i].children) {
+                var elementHeight = e.offsetHeight;
+                totalHeight += elementHeight;
+                if (totalHeight > 1050) {
+                    e.insertAdjacentHTML("beforebegin", space)
+                    totalHeight = 0;
+                } else (console.log(totalHeight))
+
+            }
+        }
+    }
+    function btnprint() {
+        // printforme();
+        window.print();
+        // rmprintforme();
+    }
+
+    function rmprintforme() {
+        let els = document.querySelectorAll(".space");
+        for (e of els) {
+            e.remove();
+        }
+    }
+
+    filling();
+    addoninputtoallinputs()
+</script>
+
+</html>
