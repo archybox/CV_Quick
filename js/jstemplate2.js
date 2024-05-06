@@ -2,6 +2,9 @@ let dropupicon = "<span class=\"material-symbols - outlined\">arrow_drop_up</spa
 let dropdoicon = "<span class=\"material-symbols-outlined\">arrow_drop_down</span>";
 let deleteicon = "<span class=\"material-symbols-outlined\">delete</span>";
 let addicon = "<span class=\"material-symbols-outlined\">add</span>";
+let callicone = "<span class=\"material-symbols-outlined\">call</span>";
+let mailicone = "<span class=\"material-symbols-outlined\">mail</span>";
+let addresicone = "<span class=\"material-symbols-outlined\">home</span>";
 
 let numberoffields = 1;
 let numberofformation = 1;
@@ -72,9 +75,12 @@ function filling() {
     cvheadline.innerHTML = headline.value;
     // cvPersonaldetailstitle.innerHTML = Personaldetails.value;
     cvname.innerText = nom.value + " " + familyname.value;
-    cvemail.innerText = email.value;
-    cvtel.innerText = tel.value;
-    cvadd.innerText = add.value;
+
+    cvemail.innerHTML =mailicone+email.value;
+    cvtel.innerHTML =callicone+ tel.value;
+    cvadd.innerHTML =addresicone+ add.value;
+
+
     cvprofiletitle.innerText = profile.value;
     cvprofiledesc.innerText = profiledesc.value;
     cvtskills.innerText = tskills.value;
@@ -183,14 +189,14 @@ function addnewskill() {
     nbskill++;
     let skillhtml = "<div class=\"skillfield\" id=\"skillfieldid" + nbskill + "\"><input type=\"text\" placeholder=\"Skill\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangeskillrange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletskill(this)\">" + deleteicon + "</button></div>"
     document.querySelector(".skillsfields").insertAdjacentHTML("beforeend", skillhtml)
-    let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div ></div><div ></div></div>"
+    let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div class='bold' ></div><div ></div></div>"
     document.querySelector(".cvskillsfields").insertAdjacentHTML("beforeend", cvskillhtml)
 }
 function addnewlanguage() {
     nblanguage++;
     let languagehtml = "<div class=\"languagefield\" id=\"languagefieldid" + nblanguage + "\"><input type=\"text\" placeholder=\"language\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangelanguagerange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletlanguage(this)\">" + deleteicon + "</button></div>"
     document.querySelector(".languagesfields").insertAdjacentHTML("beforeend", languagehtml)
-    let cvlanguagehtml = "<div class=\"cvlanguage\" id=\"cvlanguagefieldid" + nblanguage + "\"><div ></div><div ></div></div>"
+    let cvlanguagehtml = "<div class=\"cvlanguage\" id=\"cvlanguagefieldid" + nblanguage + "\"><div class='bold' ></div><div ></div></div>"
     document.querySelector(".cvlanguagesfields").insertAdjacentHTML("beforeend", cvlanguagehtml)
 }
 function addnewhb() {
