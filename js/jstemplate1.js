@@ -51,20 +51,29 @@ function addnewfield() {
     addoninputtoallinputs()
 }
 function deletefield(e) {
-    document.getElementById("cv" + e.parentElement.id).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        document.getElementById("cv" + e.parentElement.id).remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletformation(e) {
-    let id = "cv" + e.parentElement.nextElementSibling.id;
-    document.getElementById(id).remove();
-    e.parentElement.nextElementSibling.remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletemployment(e) {
-    let id = "cv" + e.parentElement.nextElementSibling.id;
-    document.getElementById(id).remove();
-    e.parentElement.nextElementSibling.remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+
 }
 function hidefield(e) {
     e.parentElement.nextElementSibling.classList.toggle("display_none");
@@ -122,7 +131,7 @@ function addformation(e) {
     numberofformation++;
     let codeformation = "<div> <br><hr><br> <input readonly type=\"text\" value=\"Education\" class=\"input_title\"><button class='delbtn' onclick=\"deletformation(this)\">" + deleteicon + "</button><button class='hidbtn' onclick=\"hidefield(this)\">" + dropdoicon + "</button></div><div id=\"educationdetails" + numberofformation + "\" class=\"personaldetails_details\"><label>Education: </label><input type=\"text\" placeholder=\"Education\"><label>School: </label><input type=\"text\" placeholder=\"School\"><label>City: </label><input type=\"text\" placeholder=\"School\"><label>Start date: </label><input style=\"width: 50%;\" type=\"date\"><label>End date: </label><input style=\"width: 50%;\" type=\"date\"><label>Description: </label><textarea style=\"width: 50%;\" name=\"\" id=\"\" cols=\"30\" rows=\"5\" placeholder=\"Description\"></textarea></div>";
     e.insertAdjacentHTML("beforebegin", codeformation);
-    let codecvformation = "<div id=\"cveducationdetails" + numberofformation + "\" class=\"cveducation3\"><div>date debut - date fine</div><div>education</div><div>school, city</div><div>description</div></div>";
+    let codecvformation = "<div id=\"cveducationdetails" + numberofformation + "\" class=\"cveducation3\"><div class='bold' >date debut - date fine</div><div class='bold' >education</div><div class='bold' >school, city</div><div>description</div></div>";
     document.querySelector(".cveducation").insertAdjacentHTML("beforeend", codecvformation);
     addoninputtoallinputs()
 }
@@ -130,7 +139,7 @@ function addemployment(e) {
     numberofemployment++;
     let codeemployment = "<div> <br><hr><br> <input readonly type=\"text\" value=\"Employment\" class=\"input_title\"><button class='delbtn' onclick=\"deletemployment(this)\">" + deleteicon + "</button><button class='hidbtn' onclick=\"hidefield(this)\">" + dropdoicon + "</button></div><div id=\"employmentdetails" + numberofemployment + "\" class=\"personaldetails_details\"><label>Employment: </label><input type=\"text\" placeholder=\"Position\"><label>Employer: </label><input type=\"text\" placeholder=\"Employer\"><label>City: </label><input type=\"text\" placeholder=\"City\"><label>Start date: </label><input style=\"width: 50%;\" type=\"date\"><label>End date: </label><input style=\"width: 50%;\" type=\"date\"><label>Description: </label><textarea style=\"width: 50%;\" name=\"\" id=\"\" cols=\"30\" rows=\"5\" placeholder=\"Description\"></textarea></div>";
     e.insertAdjacentHTML("beforebegin", codeemployment);
-    let codecvemployment = "<div id=\"cvemploymentdetails" + numberofemployment + "\" class=\"cvemployment3\"><div>date debut - date fine</div><div>position</div><div>employer, city</div><div>description</div></div>";
+    let codecvemployment = "<div id=\"cvemploymentdetails" + numberofemployment + "\" class=\"cvemployment3\"><div class='bold' >date debut - date fine</div><div class='bold' >position</div><div class='bold' >employer, city</div><div>description</div></div>";
     document.querySelector(".cvemployment").insertAdjacentHTML("beforeend", codecvemployment);
     addoninputtoallinputs()
 }
@@ -179,32 +188,41 @@ function onchangelanguagerange(e) {
     filllanguages()
 }
 function deletskill(e) {
-    let i = "cv" + e.parentElement.id;
-    document.getElementById(i).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+
 }
 function delethb(e) {
-    let i = "cv" + e.parentElement.id;
-    document.getElementById(i).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletlanguage(e) {
-    let i = "cv" + e.parentElement.id;
+    if (confirm("Want to delete?")){
+      let i = "cv" + e.parentElement.id;
     document.getElementById(i).remove();
-    e.parentElement.remove();
+    e.parentElement.remove();  
+    }
+    
 }
 function addnewskill() {
     nbskill++;
     let skillhtml = "<div class=\"skillfield\" id=\"skillfieldid" + nbskill + "\"><input type=\"text\" placeholder=\"Skill\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangeskillrange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletskill(this)\">" + deleteicon + "</button></div>"
     document.querySelector(".skillsfields").insertAdjacentHTML("beforeend", skillhtml)
-    let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div ></div><div ></div></div>"
+    let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div class='bold' ></div><div ></div></div>"
     document.querySelector(".cvskillsfields").insertAdjacentHTML("beforeend", cvskillhtml)
 }
 function addnewlanguage() {
     nblanguage++;
     let languagehtml = "<div class=\"languagefield\" id=\"languagefieldid" + nblanguage + "\"><input type=\"text\" placeholder=\"language\"><input type=\"range\" min=\"0\" max=\"4\" step=\"1\" onchange=\"onchangelanguagerange(this)\"><span>Choose</span><button class='delbtn' onclick=\"deletlanguage(this)\">" + deleteicon + "</button></div>"
     document.querySelector(".languagesfields").insertAdjacentHTML("beforeend", languagehtml)
-    let cvlanguagehtml = "<div class=\"cvlanguage\" id=\"cvlanguagefieldid" + nblanguage + "\"><div ></div><div ></div></div>"
+    let cvlanguagehtml = "<div class=\"cvlanguage\" id=\"cvlanguagefieldid" + nblanguage + "\"><div class='bold' ></div><div ></div></div>"
     document.querySelector(".cvlanguagesfields").insertAdjacentHTML("beforeend", cvlanguagehtml)
     addoninputtoallinputs()
 }
@@ -259,37 +277,38 @@ function filllanguages() {
 //     return 25.4 / dpi; // 1 inch = 25.4 mm
 // }
 
-function printforme() {
-    let container = document.querySelector(".cv .cvcn")
-    let els = container.children
-    let space = "<div class=\"space\"></div>"
-    var totalHeight = 0;
+// function printforme() {
+//     let container = document.querySelector(".cv .cvcn")
+//     let els = container.children
+//     let space = "<div class=\"space\"></div>"
+//     var totalHeight = 0;
 
 
-    for (var i = 0; i < els.length; i++) {
-        for (e of els[i].children) {
-            var elementHeight = e.offsetHeight;
-            totalHeight += elementHeight;
-            if (totalHeight > 1050) {
-                e.insertAdjacentHTML("beforebegin", space)
-                totalHeight = 0;
-            } else (console.log(totalHeight))
+//     for (var i = 0; i < els.length; i++) {
+//         for (e of els[i].children) {
+//             var elementHeight = e.offsetHeight;
+//             totalHeight += elementHeight;
+//             if (totalHeight > 1050) {
+//                 e.insertAdjacentHTML("beforebegin", space)
+//                 totalHeight = 0;
+//             } else (console.log(totalHeight))
 
-        }
-    }
-}
+//         }
+//     }
+// }
 function btnprint() {
-    printforme();
+    // printforme();
     window.print();
-    rmprintforme();
+    // rmprintforme();
 }
 
-function rmprintforme() {
-    let els = document.querySelectorAll(".space");
-    for (e of els) {
-        e.remove();
-    }
-}
+// function rmprintforme() {
+//     let els = document.querySelectorAll(".space");
+//     for (e of els) {
+//         e.remove();
+//     }
+// }
 
 filling();
 addoninputtoallinputs()
+

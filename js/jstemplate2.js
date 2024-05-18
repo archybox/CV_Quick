@@ -53,20 +53,29 @@ function addnewfield() {
     addoninputtoallinputs()
 }
 function deletefield(e) {
-    document.getElementById("cv" + e.parentElement.id).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        document.getElementById("cv" + e.parentElement.id).remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletformation(e) {
-    let id = "cv" + e.parentElement.nextElementSibling.id;
-    document.getElementById(id).remove();
-    e.parentElement.nextElementSibling.remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletemployment(e) {
-    let id = "cv" + e.parentElement.nextElementSibling.id;
-    document.getElementById(id).remove();
-    e.parentElement.nextElementSibling.remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let id = "cv" + e.parentElement.nextElementSibling.id;
+        document.getElementById(id).remove();
+        e.parentElement.nextElementSibling.remove();
+        e.parentElement.remove();
+    }
+
 }
 function hidefield(e) {
     e.parentElement.nextElementSibling.classList.toggle("display_none");
@@ -76,9 +85,9 @@ function filling() {
     // cvPersonaldetailstitle.innerHTML = Personaldetails.value;
     cvname.innerText = nom.value + " " + familyname.value;
 
-    cvemail.innerHTML =mailicone+email.value;
-    cvtel.innerHTML =callicone+ tel.value;
-    cvadd.innerHTML =addresicone+ add.value;
+    cvemail.innerHTML = mailicone + email.value;
+    cvtel.innerHTML = callicone + tel.value;
+    cvadd.innerHTML = addresicone + add.value;
 
 
     cvprofiletitle.innerText = profile.value;
@@ -171,19 +180,28 @@ function onchangelanguagerange(e) {
     filllanguages()
 }
 function deletskill(e) {
-    let i = "cv" + e.parentElement.id;
-    document.getElementById(i).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+
 }
 function delethb(e) {
-    let i = "cv" + e.parentElement.id;
-    document.getElementById(i).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+
 }
 function deletlanguage(e) {
-    let i = "cv" + e.parentElement.id;
-    document.getElementById(i).remove();
-    e.parentElement.remove();
+    if (confirm("Want to delete?")) {
+        let i = "cv" + e.parentElement.id;
+        document.getElementById(i).remove();
+        e.parentElement.remove();
+    }
+
 }
 function addnewskill() {
     nbskill++;
@@ -248,37 +266,13 @@ function filllanguages() {
 //     return 25.4 / dpi; // 1 inch = 25.4 mm
 // }
 
-function printforme() {
-    let container = document.querySelector(".cv .cvcn")
-    let els = container.children
-    let space = "<div class=\"space\"></div>"
-    var totalHeight = 0;
 
-
-    for (var i = 0; i < els.length; i++) {
-        for (e of els[i].children) {
-            var elementHeight = e.offsetHeight;
-            totalHeight += elementHeight;
-            if (totalHeight > 1050) {
-                e.insertAdjacentHTML("beforebegin", space)
-                totalHeight = 0;
-            } else (console.log(totalHeight))
-
-        }
-    }
-}
 function btnprint() {
     // printforme();
     window.print();
     // rmprintforme();
 }
 
-function rmprintforme() {
-    let els = document.querySelectorAll(".space");
-    for (e of els) {
-        e.remove();
-    }
-}
 
 filling();
 addoninputtoallinputs()
