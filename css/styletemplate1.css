@@ -21,6 +21,9 @@
             animation: logoanimation 5s infinite linear;
             box-shadow: 0px 3px 5px 0px rgb(168, 0, 0);
         }
+        .h h1 a {
+           text-decoration: none;
+        }
 
         .h h1:hover {
             cursor: pointer;
@@ -188,20 +191,24 @@
                 /* height: auto; */
             }
         }
-
+        @page:first {
+            margin: -33px 0px 30px 0px; 
+        }
         @page {
-            margin: 0mm;
-            /* border: none; */
-            margin-top: -33px;
+           
+            margin:30px 0px 30px 0px;
+            
         }
 
         .cv {
             width: 210mm;
-            min-height: 285mm;
-            border-top: 1px solid black;
-            border-left: 1px solid black;
-            border-right: 1px solid black;
-            /* border: 1px solid #000000; */
+            /* min-height: 285mm; */
+            min-height: 297mm;
+            border: 1px solid black;
+            /* border-top: 1px solid black; */
+            /* border-left: 1px solid black; */
+            /* border-right: 1px solid black; */
+            
             font-family: Arial, sans-serif;
             background-color: #ffffff;
             margin: auto;
