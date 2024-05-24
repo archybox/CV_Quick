@@ -76,7 +76,8 @@ function deletemployment(e) {
 
 }
 function hidefield(e) {
-    e.parentElement.nextElementSibling.classList.toggle("display_none");
+   // e.parentElement.nextElementSibling.classList.toggle("display_none");
+    $(e.parentElement.nextElementSibling).slideToggle();
 }
 function filling() {
     cvheadline.innerHTML = headline.value;
