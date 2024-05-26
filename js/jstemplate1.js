@@ -99,6 +99,7 @@ function filling() {
     fillskills();
     filllanguages();
     fillhbs();
+    style();
 }
 let btnshowcv = false;
 function showcv() {
@@ -218,6 +219,7 @@ function addnewskill() {
     document.querySelector(".skillsfields").insertAdjacentHTML("beforeend", skillhtml)
     let cvskillhtml = "<div class=\"cvskill\" id=\"cvskillfieldid" + nbskill + "\"><div class='bold' ></div><div ></div></div>"
     document.querySelector(".cvskillsfields").insertAdjacentHTML("beforeend", cvskillhtml)
+    addoninputtoallinputs();
 }
 function addnewlanguage() {
     nblanguage++;
@@ -309,7 +311,58 @@ function btnprint() {
 //         e.remove();
 //     }
 // }
+function dostyle(){
+    let inps=document.querySelectorAll("input[type=color");
+        document.querySelector(".cvpersonaldetails").style.backgroundColor=inps[0].value;                        
+        document.querySelector(".cv").style.backgroundColor=inps[1].value;
+        document.querySelector(".cvpersonaldetails>div:nth-child(2)").style.color=inps[2].value;                             
+        document.querySelector(".cvpersonaldetails").style.color=inps[3].value;                             
+        let ts=document.querySelectorAll(".cv .title");
+        for(t of ts){
+            t.style.color=inps[4].value;  
+        }
+         // let ts=document.querySelectorAll(".cveducation2>div:nth-child(3), .cvemployment2>div:nth-child(3), .cveducation2>div:nth-child(2), .cvemployment2>div:nth-child(2), .cveducation2>div:nth-child(4), .cvemployment2>div:nth-child(4), .cvskill div , .cvlanguage div , .cvthbs ~ div  , .cveducation2>div:nth-child(1), .cvemployment2>div:nth-child(1) , .cv .txt ");
+        ts=document.querySelectorAll(".cveducation2>div:nth-child(n), .cveducation3>div:nth-child(n), .cvemployment2>div:nth-child(n), .cvemployment3>div:nth-child(n),  .cvskill div , .cvlanguage div , #cvthbs ~ div  , .cv .txt ");
+        for(t of ts){
+            t.style.color=inps[5].value;  
+        }
+}
+function style(){
+    let inps=document.querySelectorAll("input[type=color");
+    inps[0].onchange=()=>{
+        // console.log(inps[0].value);
+        document.querySelector(".cvpersonaldetails").style.backgroundColor=inps[0].value;                        
+    }
+    inps[1].onchange=()=>{       
+        document.querySelector(".cv").style.backgroundColor=inps[1].value;
+    }
+    inps[2].onchange=()=>{      
+        document.querySelector(".cvheadline").style.color=inps[2].value;                             
+    }
+    inps[3].onchange=()=>{      
+        let ts=document.querySelectorAll(".cvpersonaldetails .bold"); 
+        for(t of ts){
+            t.style.color=inps[3].value;  
+        }                            
+    }
+    inps[4].onchange=()=>{      
+        ts=document.querySelectorAll(".cv .title");
+        for(t of ts){
+            t.style.color=inps[4].value;  
+        }
+    }
+    inps[5].onchange=()=>{      
+        // let ts=document.querySelectorAll(".cveducation2>div:nth-child(3), .cvemployment2>div:nth-child(3), .cveducation2>div:nth-child(2), .cvemployment2>div:nth-child(2), .cveducation2>div:nth-child(4), .cvemployment2>div:nth-child(4), .cvskill div , .cvlanguage div , .cvthbs ~ div  , .cveducation2>div:nth-child(1), .cvemployment2>div:nth-child(1) , .cv .txt ");
+        let ts=document.querySelectorAll(".cveducation2>div:nth-child(n), .cveducation3>div:nth-child(n), .cvemployment2>div:nth-child(n), .cvemployment3>div:nth-child(n),  .cvskill div , .cvlanguage div , #cvthbs ~ div  , .cv .txt ,.ee,.ff,.gg,.hh ");
+        for(t of ts){
+            t.style.color=inps[5].value;  
+        }
+    }
+    dostyle();
+}
 
+
+style();
 filling();
 addoninputtoallinputs()
 

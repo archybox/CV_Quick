@@ -518,4 +518,9 @@
         .darkinputs{
             background-color: bisque;
         } */
-    
+        .style_details{
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap : 20px;
+        }
