@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 .h {
@@ -86,9 +87,25 @@
     background-color: black;
     color: GOLD;
     display: flex;
+    gap: 5px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100px;
+}
+
+.f a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.f a:hover {
+
+    color: gray;
+    text-decoration: none;
+
 }
 
 .templates {
@@ -166,6 +183,6 @@
     }
 
     .f p {
-       font-size: 10px;
+        font-size: 10px;
     }
 }
