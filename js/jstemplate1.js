@@ -313,16 +313,22 @@ function btnprint() {
 // }
 function dostyle(){
     let inps=document.querySelectorAll("input[type=color");
+
         document.querySelector(".cvpersonaldetails").style.backgroundColor=inps[0].value;                        
         document.querySelector(".cv").style.backgroundColor=inps[1].value;
-        document.querySelector(".cvpersonaldetails>div:nth-child(2)").style.color=inps[2].value;                             
-        document.querySelector(".cvpersonaldetails").style.color=inps[3].value;                             
-        let ts=document.querySelectorAll(".cv .title");
+        document.querySelector(".cvheadline").style.color=inps[2].value;    
+
+        let ts=document.querySelectorAll(".cvpersonaldetails .bold");
+        for(t of ts){
+            t.style.color=inps[3].value;  
+        }
+
+        ts=document.querySelectorAll(".cv .title");
         for(t of ts){
             t.style.color=inps[4].value;  
         }
          // let ts=document.querySelectorAll(".cveducation2>div:nth-child(3), .cvemployment2>div:nth-child(3), .cveducation2>div:nth-child(2), .cvemployment2>div:nth-child(2), .cveducation2>div:nth-child(4), .cvemployment2>div:nth-child(4), .cvskill div , .cvlanguage div , .cvthbs ~ div  , .cveducation2>div:nth-child(1), .cvemployment2>div:nth-child(1) , .cv .txt ");
-        ts=document.querySelectorAll(".cveducation2>div:nth-child(n), .cveducation3>div:nth-child(n), .cvemployment2>div:nth-child(n), .cvemployment3>div:nth-child(n),  .cvskill div , .cvlanguage div , #cvthbs ~ div  , .cv .txt ");
+        ts=document.querySelectorAll(".cveducation2>div:nth-child(n), .cveducation3>div:nth-child(n), .cvemployment2>div:nth-child(n), .cvemployment3>div:nth-child(n),  .cvskill div , .cvlanguage div , #cvthbs ~ div  , .cv .txt,.ee,.ff,.gg,.hh  ");
         for(t of ts){
             t.style.color=inps[5].value;  
         }
